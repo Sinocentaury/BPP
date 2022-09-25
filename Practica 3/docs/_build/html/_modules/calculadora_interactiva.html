@@ -1,0 +1,324 @@
+
+<!DOCTYPE html>
+
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>calculadora_interactiva &#8212; Calculadora Interactiva 1.0.0.1 documentation</title>
+    <link rel="stylesheet" type="text/css" href="../_static/pygments.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/alabaster.css" />
+    <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
+    <script src="../_static/jquery.js"></script>
+    <script src="../_static/underscore.js"></script>
+    <script src="../_static/_sphinx_javascript_frameworks_compat.js"></script>
+    <script src="../_static/doctools.js"></script>
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+   
+  <link rel="stylesheet" href="../_static/custom.css" type="text/css" />
+  
+  
+  <meta name="viewport" content="width=device-width, initial-scale=0.9, maximum-scale=0.9" />
+
+  </head><body>
+  
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          
+
+          <div class="body" role="main">
+            
+  <h1>Source code for calculadora_interactiva</h1><div class="highlight"><pre>
+<span></span><span class="c1">### MASTER DE PROGRAMACIÓN AVANZADA EN PYTHON</span>
+<span class="c1">### ASIGNATURA. BUENAS PRÁCTICAS DE PROGRAMACIÓN CON PYTHON</span>
+<span class="c1">### ACTIVIDAD LECCION 4. DEPURACIÓN Y REGLAS DE OPTIMIZACIÓN DE CÓDIGO</span>
+<span class="c1">### AUTOR: JESÚS GUTIÉRREZ CONTRERAS</span>
+
+<span class="c1">############################################################################################################################</span>
+<span class="c1">#############################################   OPCION INTERACTIVA   #######################################################</span>
+<span class="c1">############################################################################################################################</span>
+
+<div class="viewcode-block" id="Calculator"><a class="viewcode-back" href="../calculadora_interactiva.html#calculadora_interactiva.Calculator">[docs]</a><span class="k">class</span> <span class="nc">Calculator</span><span class="p">:</span>
+    <span class="sd">&#39;&#39;&#39;</span>
+<span class="sd">    Calculator</span>
+
+<span class="sd">    Atributos</span>
+<span class="sd">    ---------</span>
+<span class="sd">    num1:</span>
+<span class="sd">        primer valor</span>
+<span class="sd">    num2:</span>
+<span class="sd">        segundo valor</span>
+<span class="sd">    </span>
+
+<span class="sd">    Métodos</span>
+<span class="sd">    -------</span>
+<span class="sd">    sumar:</span>
+<span class="sd">        Suma los valores num1 y num2</span>
+<span class="sd">    restar:</span>
+<span class="sd">        Resta los valores num1 y num2</span>
+<span class="sd">    multiplicar:</span>
+<span class="sd">        Multiplica los valores num1 y num2</span>
+<span class="sd">    dividir:</span>
+<span class="sd">        Divide los valores num1 entre num2</span>
+
+<span class="sd">    </span>
+<span class="sd">    Ejemplos</span>
+<span class="sd">    --------</span>
+<span class="sd">    &gt;&gt;&gt; import Calculator</span>
+<span class="sd">    &gt;&gt;&gt; cal = Calculator()</span>
+<span class="sd">    &gt;&gt;&gt; resultado_suma = cal.sumar(2,6)</span>
+<span class="sd">    &gt;&gt;&gt; print (resultado_suma)</span>
+<span class="sd">    &gt;&gt;&gt; resultado_dividir = cal.dividir(10,5)</span>
+<span class="sd">    &gt;&gt;&gt; print (resultado_dividir)</span>
+<span class="sd">    &#39;&#39;&#39;</span>
+
+    <span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">num1</span> <span class="o">=</span> <span class="mi">0</span><span class="p">,</span><span class="n">num2</span> <span class="o">=</span> <span class="mi">0</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kc">None</span><span class="p">:</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">numero1</span> <span class="o">=</span> <span class="n">num1</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">numero2</span> <span class="o">=</span> <span class="n">num2</span>
+    
+<div class="viewcode-block" id="Calculator.sumar"><a class="viewcode-back" href="../calculadora_interactiva.html#calculadora_interactiva.Calculator.sumar">[docs]</a>    <span class="k">def</span> <span class="nf">sumar</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span><span class="n">num1</span><span class="p">,</span><span class="n">num2</span><span class="p">):</span>
+        <span class="sd">&#39;&#39;&#39;</span>
+<span class="sd">        Suma los valores nun1 y nun2</span>
+<span class="sd">        &#39;&#39;&#39;</span>
+        <span class="k">try</span><span class="p">:</span> 
+            <span class="n">suma</span> <span class="o">=</span> <span class="n">num1</span> <span class="o">+</span> <span class="n">num2</span>
+        <span class="k">except</span> <span class="ne">Exception</span> <span class="k">as</span> <span class="n">e</span><span class="p">:</span>
+            <span class="nb">print</span> <span class="p">(</span><span class="sa">f</span><span class="s2">&quot;Ha introducido unos valores incorrectos, por favor vuelva a intentarlo</span><span class="se">\n</span><span class="s2">Descripción del Error: </span><span class="si">{</span><span class="n">e</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+        <span class="k">else</span><span class="p">:</span>
+            <span class="k">return</span> <span class="n">suma</span></div>
+    
+<div class="viewcode-block" id="Calculator.restar"><a class="viewcode-back" href="../calculadora_interactiva.html#calculadora_interactiva.Calculator.restar">[docs]</a>    <span class="k">def</span> <span class="nf">restar</span> <span class="p">(</span><span class="bp">self</span><span class="p">,</span><span class="n">num1</span><span class="p">,</span><span class="n">num2</span><span class="p">):</span>
+        <span class="sd">&#39;&#39;&#39;</span>
+<span class="sd">        Resta los valores nun1 y nun2</span>
+<span class="sd">        &#39;&#39;&#39;</span>
+        <span class="k">try</span><span class="p">:</span> 
+            <span class="n">resta</span> <span class="o">=</span> <span class="n">num1</span> <span class="o">-</span> <span class="n">num2</span>
+            <span class="n">resta</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">numero1</span> <span class="o">-</span> <span class="bp">self</span><span class="o">.</span><span class="n">numero2</span>
+        <span class="k">except</span> <span class="ne">Exception</span> <span class="k">as</span> <span class="n">e</span><span class="p">:</span>
+            <span class="nb">print</span> <span class="p">(</span><span class="sa">f</span><span class="s2">&quot;Ha introducido unos valores incorrectos, por favor vuelva a intentarlo</span><span class="se">\n</span><span class="s2">Descripción del Error: </span><span class="si">{</span><span class="n">e</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+        <span class="k">else</span><span class="p">:</span>
+            <span class="k">return</span> <span class="n">resta</span></div>
+    
+<div class="viewcode-block" id="Calculator.multiplicar"><a class="viewcode-back" href="../calculadora_interactiva.html#calculadora_interactiva.Calculator.multiplicar">[docs]</a>    <span class="k">def</span> <span class="nf">multiplicar</span> <span class="p">(</span><span class="bp">self</span><span class="p">,</span><span class="n">num1</span><span class="p">,</span> <span class="n">num2</span><span class="p">):</span>
+        <span class="sd">&#39;&#39;&#39;</span>
+<span class="sd">        Multiplica los valores nun1 y nun2</span>
+<span class="sd">        &#39;&#39;&#39;</span>
+        <span class="k">try</span><span class="p">:</span> 
+            <span class="n">multiplicacion</span> <span class="o">=</span> <span class="n">num1</span> <span class="o">*</span> <span class="n">num2</span>
+        <span class="k">except</span> <span class="ne">Exception</span> <span class="k">as</span> <span class="n">e</span><span class="p">:</span>
+            <span class="nb">print</span> <span class="p">(</span><span class="sa">f</span><span class="s2">&quot;Ha introducido unos valores incorrectos, por favor vuelva a intentarlo</span><span class="se">\n</span><span class="s2">Descripción del Error: </span><span class="si">{</span><span class="n">e</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+        <span class="k">else</span><span class="p">:</span>
+            <span class="k">return</span> <span class="n">multiplicacion</span></div>
+    
+<div class="viewcode-block" id="Calculator.dividir"><a class="viewcode-back" href="../calculadora_interactiva.html#calculadora_interactiva.Calculator.dividir">[docs]</a>    <span class="k">def</span> <span class="nf">dividir</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span><span class="n">num1</span><span class="p">,</span> <span class="n">num2</span><span class="p">):</span>
+        <span class="sd">&#39;&#39;&#39;</span>
+<span class="sd">        Divide los valores nun1 entre nun2</span>
+<span class="sd">        &#39;&#39;&#39;</span>
+        <span class="k">try</span><span class="p">:</span> 
+            <span class="n">division</span> <span class="o">=</span> <span class="n">num1</span> <span class="o">/</span> <span class="n">num2</span>
+        <span class="k">except</span> <span class="ne">ZeroDivisionError</span><span class="p">:</span>
+            <span class="nb">print</span> <span class="p">(</span><span class="sa">f</span><span class="s2">&quot;Ha intentado dividir por &#39;cero&#39;, por favor vuelva a intentarlo.&quot;</span><span class="p">)</span>
+            <span class="k">return</span> <span class="kc">False</span>
+        <span class="k">except</span> <span class="ne">Exception</span> <span class="k">as</span> <span class="n">e</span><span class="p">:</span>
+            <span class="nb">print</span> <span class="p">(</span><span class="sa">f</span><span class="s2">&quot;Ha introducido unos valores incorrectos, por favor vuelva a intentarlo</span><span class="se">\n</span><span class="s2">Descripción del Error: </span><span class="si">{</span><span class="n">e</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+        <span class="k">else</span><span class="p">:</span>
+            <span class="k">return</span> <span class="n">division</span></div></div>
+
+<div class="viewcode-block" id="menuOpciones"><a class="viewcode-back" href="../calculadora_interactiva.html#calculadora_interactiva.menuOpciones">[docs]</a><span class="k">def</span> <span class="nf">menuOpciones</span><span class="p">(</span><span class="n">num</span> <span class="o">=</span> <span class="mi">1</span><span class="p">):</span>  <span class="c1">#Mostrará un menú de opciones</span>
+    <span class="sd">&#39;&#39;&#39;</span>
+<span class="sd">    Mostrará un título y un menú de opciones para que el usuario elija lo que desea hacer</span>
+<span class="sd">    &#39;&#39;&#39;</span>
+    <span class="k">if</span> <span class="n">num</span> <span class="o">==</span> <span class="mi">0</span><span class="p">:</span>    <span class="c1"># Si es la primera vez mostramos todo el menú pero si no, no se mostrará más este mensaje de bienvenida</span>
+        <span class="nb">print</span> <span class="p">(</span><span class="s2">&quot;-------------------------------------------&quot;</span><span class="p">)</span>
+        <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;  BIENVENID@ A LA CALCULADORA INTERACTIVA&quot;</span><span class="p">)</span>
+        <span class="nb">print</span> <span class="p">(</span><span class="s2">&quot;-------------------------------------------&quot;</span><span class="p">)</span>
+
+    
+    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;QUÉ DESEA HACER:&quot;</span><span class="p">)</span>
+    <span class="nb">print</span> <span class="p">(</span><span class="s2">&quot;</span><span class="se">\t</span><span class="s2">1. Sumar 2 números&quot;</span><span class="p">)</span>
+    <span class="nb">print</span> <span class="p">(</span><span class="s2">&quot;</span><span class="se">\t</span><span class="s2">2. Restar 2 números&quot;</span><span class="p">)</span>
+    <span class="nb">print</span> <span class="p">(</span><span class="s2">&quot;</span><span class="se">\t</span><span class="s2">3. Multiplicar 2 números&quot;</span><span class="p">)</span>
+    <span class="nb">print</span> <span class="p">(</span><span class="s2">&quot;</span><span class="se">\t</span><span class="s2">4. Dividir 2 números&quot;</span><span class="p">)</span>
+    <span class="nb">print</span> <span class="p">(</span><span class="s2">&quot;</span><span class="se">\t</span><span class="s2">5. Salir del Programa&quot;</span><span class="p">)</span></div>
+    
+<div class="viewcode-block" id="eleccionUsuario"><a class="viewcode-back" href="../calculadora_interactiva.html#calculadora_interactiva.eleccionUsuario">[docs]</a><span class="k">def</span> <span class="nf">eleccionUsuario</span><span class="p">():</span>  <span class="c1"># Recoge la eleción introducida por el usuario y la valida</span>
+    <span class="sd">&#39;&#39;&#39;</span>
+<span class="sd">    Comprueba si la opción que ha introducido el usuario es válida</span>
+<span class="sd">    &#39;&#39;&#39;</span>
+    <span class="n">correcto</span> <span class="o">=</span> <span class="kc">False</span>
+    <span class="k">while</span> <span class="ow">not</span> <span class="n">correcto</span><span class="p">:</span>
+        <span class="n">opcion</span> <span class="o">=</span> <span class="nb">input</span><span class="p">(</span><span class="s2">&quot;Introduzca la opción deseada: &quot;</span><span class="p">)</span>
+        <span class="n">correcto</span> <span class="o">=</span> <span class="n">comprobarValorOpcion</span><span class="p">(</span><span class="n">opcion</span><span class="p">)</span>
+        <span class="k">if</span> <span class="ow">not</span> <span class="n">correcto</span><span class="p">:</span>
+            <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Ha introducido una opción errónea.&quot;</span><span class="p">)</span>
+
+    <span class="k">return</span> <span class="nb">int</span><span class="p">(</span><span class="n">opcion</span><span class="p">)</span></div>
+
+<div class="viewcode-block" id="comprobarValorOpcion"><a class="viewcode-back" href="../calculadora_interactiva.html#calculadora_interactiva.comprobarValorOpcion">[docs]</a><span class="k">def</span> <span class="nf">comprobarValorOpcion</span> <span class="p">(</span><span class="n">num</span><span class="p">):</span> <span class="c1"># Comprueba si la número que ha introducido el usuario es válido</span>
+    <span class="sd">&#39;&#39;&#39;</span>
+<span class="sd">    Comprueba si la opción que ha introducido el usuario es está en el rango permitido (opciones posibles)</span>
+<span class="sd">    &#39;&#39;&#39;</span>
+    <span class="k">try</span><span class="p">:</span>
+        <span class="n">numero</span> <span class="o">=</span> <span class="nb">int</span><span class="p">(</span><span class="n">num</span><span class="p">)</span>   <span class="c1"># Comprobamos si es un número</span>
+    <span class="k">except</span><span class="p">:</span>
+        <span class="k">return</span> <span class="kc">False</span>
+        
+    <span class="k">else</span><span class="p">:</span>
+        <span class="k">if</span> <span class="n">numero</span> <span class="o">&gt;</span> <span class="mi">0</span> <span class="ow">and</span> <span class="n">numero</span> <span class="o">&lt;=</span> <span class="mi">5</span><span class="p">:</span>    <span class="c1"># Comprobamos si el número está entre 1 y 5 que es el rango de opciones que puede elegir el usuario</span>
+            <span class="k">return</span> <span class="kc">True</span>
+        <span class="k">else</span><span class="p">:</span>
+            <span class="k">return</span> <span class="kc">False</span></div>
+
+<div class="viewcode-block" id="comprobarValorNumero"><a class="viewcode-back" href="../calculadora_interactiva.html#calculadora_interactiva.comprobarValorNumero">[docs]</a><span class="k">def</span> <span class="nf">comprobarValorNumero</span> <span class="p">(</span><span class="n">num</span><span class="p">):</span> <span class="c1"># Recoge el número introducido por el usuario y lo valida</span>
+    <span class="sd">&#39;&#39;&#39;</span>
+<span class="sd">    Comprueba si el valor introducido es un número</span>
+<span class="sd">    &#39;&#39;&#39;</span>
+    <span class="k">try</span><span class="p">:</span>
+        <span class="n">numero</span> <span class="o">=</span> <span class="nb">int</span><span class="p">(</span><span class="n">num</span><span class="p">)</span>   <span class="c1"># Comprobamos si es un número</span>
+    <span class="k">except</span><span class="p">:</span>
+        <span class="k">return</span> <span class="kc">False</span>
+        
+    <span class="k">else</span><span class="p">:</span>
+        <span class="k">return</span> <span class="kc">True</span></div>
+
+<div class="viewcode-block" id="solicitudValor"><a class="viewcode-back" href="../calculadora_interactiva.html#calculadora_interactiva.solicitudValor">[docs]</a><span class="k">def</span> <span class="nf">solicitudValor</span><span class="p">(</span><span class="n">opcion</span><span class="p">):</span> <span class="c1"># Solicita los números para operar y comprueba si son válidos</span>
+    <span class="sd">&#39;&#39;&#39;</span>
+<span class="sd">    Solicita 2 valores al usuario (num1 y num2) y comprueba si son válidos</span>
+<span class="sd">    &#39;&#39;&#39;</span>
+    <span class="n">correcto</span> <span class="o">=</span> <span class="kc">False</span>
+    
+    <span class="c1">#Solicitud del PRIMER NUMERO</span>
+    <span class="k">while</span> <span class="ow">not</span> <span class="n">correcto</span><span class="p">:</span> <span class="c1"># Se le estará solicitando un valor mientras sea incorrecto</span>
+        <span class="n">numero1</span> <span class="o">=</span> <span class="nb">input</span><span class="p">(</span><span class="s2">&quot;Introduzca el primer número: &quot;</span><span class="p">)</span>
+        <span class="n">correcto</span> <span class="o">=</span> <span class="n">comprobarValorNumero</span><span class="p">(</span><span class="n">numero1</span><span class="p">)</span>
+        <span class="k">if</span> <span class="ow">not</span> <span class="n">correcto</span><span class="p">:</span>
+            <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Ha introducido un valor no válido.&quot;</span><span class="p">)</span>
+        <span class="k">else</span><span class="p">:</span>
+            <span class="n">numero1</span> <span class="o">=</span> <span class="nb">int</span><span class="p">(</span><span class="n">numero1</span><span class="p">)</span>
+
+    <span class="n">correcto</span> <span class="o">=</span> <span class="kc">False</span>
+
+    <span class="c1">#Solicitud del SEGUNDO NUMERO</span>
+    <span class="k">while</span> <span class="ow">not</span> <span class="n">correcto</span><span class="p">:</span> <span class="c1"># Se le estará solicitando un valor mientras sea incorrecto</span>
+        <span class="n">numero2</span> <span class="o">=</span> <span class="nb">input</span><span class="p">(</span><span class="s2">&quot;Introduzca el segundo número: &quot;</span><span class="p">)</span>
+        <span class="n">correcto</span> <span class="o">=</span> <span class="n">comprobarValorNumero</span><span class="p">(</span><span class="n">numero2</span><span class="p">)</span>
+        <span class="k">if</span> <span class="n">opcion</span> <span class="o">==</span> <span class="mi">4</span> <span class="ow">and</span> <span class="n">numero2</span> <span class="o">==</span> <span class="s2">&quot;0&quot;</span><span class="p">:</span>    <span class="c1"># Comprobamos que el usuario no quiera dividir por cero</span>
+            <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Ha introducido un valor no válido.&quot;</span><span class="p">)</span>
+            <span class="n">correcto</span> <span class="o">=</span> <span class="kc">False</span>
+        <span class="k">elif</span> <span class="ow">not</span> <span class="n">correcto</span><span class="p">:</span>
+            <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Ha introducido un valor no válido.&quot;</span><span class="p">)</span>
+        <span class="k">else</span><span class="p">:</span>
+            <span class="n">numero2</span> <span class="o">=</span> <span class="nb">int</span><span class="p">(</span><span class="n">numero2</span><span class="p">)</span>
+
+    <span class="k">return</span> <span class="n">numero1</span><span class="p">,</span> <span class="n">numero2</span></div>
+
+<div class="viewcode-block" id="operacionAritmetica"><a class="viewcode-back" href="../calculadora_interactiva.html#calculadora_interactiva.operacionAritmetica">[docs]</a><span class="k">def</span> <span class="nf">operacionAritmetica</span> <span class="p">(</span><span class="n">opcionUsuario</span><span class="p">,</span><span class="n">num1</span><span class="p">,</span><span class="n">num2</span><span class="p">):</span>  <span class="c1">#Realiza la operación matemática</span>
+    <span class="sd">&#39;&#39;&#39;</span>
+<span class="sd">    Realiza una operación aritmética en función de la opción elegida por el usuario y devuelve el resultado</span>
+<span class="sd">    &#39;&#39;&#39;</span>
+    <span class="n">resultado</span> <span class="o">=</span> <span class="mi">0</span>
+    <span class="k">if</span> <span class="n">opcionUsuario</span> <span class="o">==</span> <span class="mi">1</span><span class="p">:</span>
+        <span class="n">resultado</span> <span class="o">=</span> <span class="n">calculadora</span><span class="o">.</span><span class="n">sumar</span><span class="p">(</span><span class="n">num1</span><span class="p">,</span><span class="n">num2</span><span class="p">)</span>
+    <span class="k">elif</span> <span class="n">opcionUsuario</span> <span class="o">==</span> <span class="mi">2</span><span class="p">:</span>
+       <span class="n">resultado</span> <span class="o">=</span> <span class="n">calculadora</span><span class="o">.</span><span class="n">restar</span><span class="p">(</span><span class="n">num1</span><span class="p">,</span><span class="n">num2</span><span class="p">)</span>
+    <span class="k">elif</span> <span class="n">opcionUsuario</span> <span class="o">==</span> <span class="mi">3</span><span class="p">:</span>
+        <span class="n">resultado</span> <span class="o">=</span> <span class="n">calculadora</span><span class="o">.</span><span class="n">multiplicar</span><span class="p">(</span><span class="n">num1</span><span class="p">,</span><span class="n">num2</span><span class="p">)</span>
+    <span class="k">elif</span> <span class="n">opcionUsuario</span> <span class="o">==</span> <span class="mi">4</span><span class="p">:</span>
+        <span class="n">resultado</span> <span class="o">=</span> <span class="n">calculadora</span><span class="o">.</span><span class="n">dividir</span><span class="p">(</span><span class="n">num1</span><span class="p">,</span><span class="n">num2</span><span class="p">)</span>
+        
+    <span class="k">return</span> <span class="n">resultado</span></div>
+
+<span class="n">calculadora</span> <span class="o">=</span> <span class="n">Calculator</span><span class="p">()</span>
+<span class="n">opcionUsuario</span> <span class="o">=</span> <span class="mi">0</span>
+<span class="n">primeraVez</span> <span class="o">=</span> <span class="mi">0</span>    <span class="c1">#Nos servirá para saber si el mensaje de bienvenida se ha mostrado ya, para no repetirlo</span>
+
+<span class="k">while</span> <span class="n">opcionUsuario</span> <span class="o">!=</span> <span class="mi">5</span><span class="p">:</span>   <span class="c1">#Si el usuario no ha elegido la opción de salir del programa se procederá a realizar la operación aritmética</span>
+    <span class="n">menuOpciones</span><span class="p">(</span><span class="n">primeraVez</span><span class="p">)</span>
+    
+    <span class="n">opcionUsuario</span> <span class="o">=</span> <span class="n">eleccionUsuario</span><span class="p">()</span>
+    
+    <span class="k">if</span> <span class="n">opcionUsuario</span> <span class="o">!=</span> <span class="mi">5</span><span class="p">:</span>  <span class="c1"># Si el usuario no ha elegido salir ejecutamos todo el algoritmo, si no, salimos del programa</span>
+        <span class="n">valores</span> <span class="o">=</span> <span class="n">solicitudValor</span><span class="p">(</span><span class="n">opcionUsuario</span><span class="p">)</span>
+        <span class="n">calculadora</span><span class="o">.</span><span class="n">numero1</span> <span class="o">=</span> <span class="n">valores</span> <span class="p">[</span><span class="mi">0</span><span class="p">]</span>
+        <span class="n">calculadora</span><span class="o">.</span><span class="n">numero2</span> <span class="o">=</span> <span class="n">valores</span> <span class="p">[</span><span class="mi">1</span><span class="p">]</span>
+        <span class="n">resultado</span> <span class="o">=</span> <span class="n">operacionAritmetica</span><span class="p">(</span><span class="n">opcionUsuario</span><span class="p">,</span><span class="n">calculadora</span><span class="o">.</span><span class="n">numero1</span><span class="p">,</span> <span class="n">calculadora</span><span class="o">.</span><span class="n">numero2</span><span class="p">)</span>
+        <span class="nb">print</span> <span class="p">(</span><span class="s2">&quot;------------------------------------------------------------&quot;</span><span class="p">)</span>
+        <span class="nb">print</span> <span class="p">(</span><span class="sa">f</span><span class="s2">&quot;</span><span class="se">\t</span><span class="s2">El resultado de la operación aritmética es: </span><span class="si">{</span><span class="n">resultado</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+        <span class="nb">print</span> <span class="p">(</span><span class="s2">&quot;------------------------------------------------------------</span><span class="se">\n</span><span class="s2">&quot;</span><span class="p">)</span>  
+
+    <span class="n">primeraVez</span> <span class="o">=</span> <span class="mi">1</span>    <span class="c1">#Esta variable solo sirve para saber si es la primera vez que entramos en el bucle</span>
+    
+
+<span class="c1"># Si ha elegido la opción de salir, se mostrará un mensaje de despedida</span>
+<span class="nb">print</span> <span class="p">(</span><span class="s2">&quot;GRACIAS POR USAR LA CALCULADORA INTERACTIVA&quot;</span><span class="p">)</span>
+</pre></div>
+
+          </div>
+          
+        </div>
+      </div>
+      <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
+        <div class="sphinxsidebarwrapper">
+<h1 class="logo"><a href="../index.html">Calculadora Interactiva</a></h1>
+
+
+
+
+
+
+
+
+<h3>Navigation</h3>
+<p class="caption" role="heading"><span class="caption-text">Contents:</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../modules.html">code</a></li>
+</ul>
+
+<div class="relations">
+<h3>Related Topics</h3>
+<ul>
+  <li><a href="../index.html">Documentation overview</a><ul>
+  <li><a href="index.html">Module code</a><ul>
+  </ul></li>
+  </ul></li>
+</ul>
+</div>
+<div id="searchbox" style="display: none" role="search">
+  <h3 id="searchlabel">Quick search</h3>
+    <div class="searchformwrapper">
+    <form class="search" action="../search.html" method="get">
+      <input type="text" name="q" aria-labelledby="searchlabel" autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false"/>
+      <input type="submit" value="Go" />
+    </form>
+    </div>
+</div>
+<script>document.getElementById('searchbox').style.display = "block"</script>
+
+
+
+
+
+
+
+
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="footer">
+      &copy;2022, Jesús Gutiérrez Contreras.
+      
+      |
+      Powered by <a href="http://sphinx-doc.org/">Sphinx 5.1.1</a>
+      &amp; <a href="https://github.com/bitprophet/alabaster">Alabaster 0.7.12</a>
+      
+    </div>
+
+    
+
+    
+  </body>
+</html>

@@ -1,0 +1,203 @@
+
+<!DOCTYPE html>
+
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.19: https://docutils.sourceforge.io/" />
+
+    <title>calculadora_interactiva module &#8212; Calculadora Interactiva 1.0.0.1 documentation</title>
+    <link rel="stylesheet" type="text/css" href="_static/pygments.css" />
+    <link rel="stylesheet" type="text/css" href="_static/alabaster.css" />
+    <script data-url_root="./" id="documentation_options" src="_static/documentation_options.js"></script>
+    <script src="_static/jquery.js"></script>
+    <script src="_static/underscore.js"></script>
+    <script src="_static/_sphinx_javascript_frameworks_compat.js"></script>
+    <script src="_static/doctools.js"></script>
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="prev" title="code" href="modules.html" />
+   
+  <link rel="stylesheet" href="_static/custom.css" type="text/css" />
+  
+  
+  <meta name="viewport" content="width=device-width, initial-scale=0.9, maximum-scale=0.9" />
+
+  </head><body>
+  
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          
+
+          <div class="body" role="main">
+            
+  <section id="module-calculadora_interactiva">
+<span id="calculadora-interactiva-module"></span><h1>calculadora_interactiva module<a class="headerlink" href="#module-calculadora_interactiva" title="Permalink to this heading">¶</a></h1>
+<dl class="py class">
+<dt class="sig sig-object py" id="calculadora_interactiva.Calculator">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">calculadora_interactiva.</span></span><span class="sig-name descname"><span class="pre">Calculator</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">num1</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">0</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">num2</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">0</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/calculadora_interactiva.html#Calculator"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#calculadora_interactiva.Calculator" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></p>
+<dl class="simple">
+<dt>num1:</dt><dd><p>primer valor</p>
+</dd>
+<dt>num2:</dt><dd><p>segundo valor</p>
+</dd>
+</dl>
+<dl class="simple">
+<dt>sumar:</dt><dd><p>Suma los valores num1 y num2</p>
+</dd>
+<dt>restar:</dt><dd><p>Resta los valores num1 y num2</p>
+</dd>
+<dt>multiplicar:</dt><dd><p>Multiplica los valores num1 y num2</p>
+</dd>
+<dt>dividir:</dt><dd><p>Divide los valores num1 entre num2</p>
+</dd>
+</dl>
+<div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="kn">import</span> <span class="nn">Calculator</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">cal</span> <span class="o">=</span> <span class="n">Calculator</span><span class="p">()</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">resultado_suma</span> <span class="o">=</span> <span class="n">cal</span><span class="o">.</span><span class="n">sumar</span><span class="p">(</span><span class="mi">2</span><span class="p">,</span><span class="mi">6</span><span class="p">)</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="nb">print</span> <span class="p">(</span><span class="n">resultado_suma</span><span class="p">)</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">resultado_dividir</span> <span class="o">=</span> <span class="n">cal</span><span class="o">.</span><span class="n">dividir</span><span class="p">(</span><span class="mi">10</span><span class="p">,</span><span class="mi">5</span><span class="p">)</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="nb">print</span> <span class="p">(</span><span class="n">resultado_dividir</span><span class="p">)</span>
+</pre></div>
+</div>
+<dl class="py method">
+<dt class="sig sig-object py" id="calculadora_interactiva.Calculator.dividir">
+<span class="sig-name descname"><span class="pre">dividir</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">num1</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">num2</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/calculadora_interactiva.html#Calculator.dividir"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#calculadora_interactiva.Calculator.dividir" title="Permalink to this definition">¶</a></dt>
+<dd><p>Divide los valores nun1 entre nun2</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="calculadora_interactiva.Calculator.multiplicar">
+<span class="sig-name descname"><span class="pre">multiplicar</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">num1</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">num2</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/calculadora_interactiva.html#Calculator.multiplicar"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#calculadora_interactiva.Calculator.multiplicar" title="Permalink to this definition">¶</a></dt>
+<dd><p>Multiplica los valores nun1 y nun2</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="calculadora_interactiva.Calculator.restar">
+<span class="sig-name descname"><span class="pre">restar</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">num1</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">num2</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/calculadora_interactiva.html#Calculator.restar"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#calculadora_interactiva.Calculator.restar" title="Permalink to this definition">¶</a></dt>
+<dd><p>Resta los valores nun1 y nun2</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="calculadora_interactiva.Calculator.sumar">
+<span class="sig-name descname"><span class="pre">sumar</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">num1</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">num2</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/calculadora_interactiva.html#Calculator.sumar"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#calculadora_interactiva.Calculator.sumar" title="Permalink to this definition">¶</a></dt>
+<dd><p>Suma los valores nun1 y nun2</p>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="calculadora_interactiva.comprobarValorNumero">
+<span class="sig-prename descclassname"><span class="pre">calculadora_interactiva.</span></span><span class="sig-name descname"><span class="pre">comprobarValorNumero</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">num</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/calculadora_interactiva.html#comprobarValorNumero"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#calculadora_interactiva.comprobarValorNumero" title="Permalink to this definition">¶</a></dt>
+<dd><p>Comprueba si el valor introducido es un número</p>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="calculadora_interactiva.comprobarValorOpcion">
+<span class="sig-prename descclassname"><span class="pre">calculadora_interactiva.</span></span><span class="sig-name descname"><span class="pre">comprobarValorOpcion</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">num</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/calculadora_interactiva.html#comprobarValorOpcion"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#calculadora_interactiva.comprobarValorOpcion" title="Permalink to this definition">¶</a></dt>
+<dd><p>Comprueba si la opción que ha introducido el usuario es está en el rango permitido (opciones posibles)</p>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="calculadora_interactiva.eleccionUsuario">
+<span class="sig-prename descclassname"><span class="pre">calculadora_interactiva.</span></span><span class="sig-name descname"><span class="pre">eleccionUsuario</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="_modules/calculadora_interactiva.html#eleccionUsuario"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#calculadora_interactiva.eleccionUsuario" title="Permalink to this definition">¶</a></dt>
+<dd><p>Comprueba si la opción que ha introducido el usuario es válida</p>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="calculadora_interactiva.menuOpciones">
+<span class="sig-prename descclassname"><span class="pre">calculadora_interactiva.</span></span><span class="sig-name descname"><span class="pre">menuOpciones</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">num</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">1</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/calculadora_interactiva.html#menuOpciones"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#calculadora_interactiva.menuOpciones" title="Permalink to this definition">¶</a></dt>
+<dd><p>Mostrará un título y un menú de opciones para que el usuario elija lo que desea hacer</p>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="calculadora_interactiva.operacionAritmetica">
+<span class="sig-prename descclassname"><span class="pre">calculadora_interactiva.</span></span><span class="sig-name descname"><span class="pre">operacionAritmetica</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">opcionUsuario</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">num1</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">num2</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/calculadora_interactiva.html#operacionAritmetica"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#calculadora_interactiva.operacionAritmetica" title="Permalink to this definition">¶</a></dt>
+<dd><p>Realiza una operación aritmética en función de la opción elegida por el usuario y devuelve el resultado</p>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="calculadora_interactiva.solicitudValor">
+<span class="sig-prename descclassname"><span class="pre">calculadora_interactiva.</span></span><span class="sig-name descname"><span class="pre">solicitudValor</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">opcion</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/calculadora_interactiva.html#solicitudValor"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#calculadora_interactiva.solicitudValor" title="Permalink to this definition">¶</a></dt>
+<dd><p>Solicita 2 valores al usuario (num1 y num2) y comprueba si son válidos</p>
+</dd></dl>
+
+</section>
+
+
+          </div>
+          
+        </div>
+      </div>
+      <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
+        <div class="sphinxsidebarwrapper">
+<h1 class="logo"><a href="index.html">Calculadora Interactiva</a></h1>
+
+
+
+
+
+
+
+
+<h3>Navigation</h3>
+<p class="caption" role="heading"><span class="caption-text">Contents:</span></p>
+<ul class="current">
+<li class="toctree-l1 current"><a class="reference internal" href="modules.html">code</a><ul class="current">
+<li class="toctree-l2 current"><a class="current reference internal" href="#">calculadora_interactiva module</a></li>
+</ul>
+</li>
+</ul>
+
+<div class="relations">
+<h3>Related Topics</h3>
+<ul>
+  <li><a href="index.html">Documentation overview</a><ul>
+  <li><a href="modules.html">code</a><ul>
+      <li>Previous: <a href="modules.html" title="previous chapter">code</a></li>
+  </ul></li>
+  </ul></li>
+</ul>
+</div>
+<div id="searchbox" style="display: none" role="search">
+  <h3 id="searchlabel">Quick search</h3>
+    <div class="searchformwrapper">
+    <form class="search" action="search.html" method="get">
+      <input type="text" name="q" aria-labelledby="searchlabel" autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false"/>
+      <input type="submit" value="Go" />
+    </form>
+    </div>
+</div>
+<script>document.getElementById('searchbox').style.display = "block"</script>
+
+
+
+
+
+
+
+
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="footer">
+      &copy;2022, Jesús Gutiérrez Contreras.
+      
+      |
+      Powered by <a href="http://sphinx-doc.org/">Sphinx 5.1.1</a>
+      &amp; <a href="https://github.com/bitprophet/alabaster">Alabaster 0.7.12</a>
+      
+      |
+      <a href="_sources/calculadora_interactiva.rst.txt"
+          rel="nofollow">Page source</a>
+    </div>
+
+    
+
+    
+  </body>
+</html>
